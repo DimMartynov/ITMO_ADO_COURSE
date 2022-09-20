@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Lab1_task1.Properties
+namespace Lab1_task1_task2.Properties
 {
 
 
