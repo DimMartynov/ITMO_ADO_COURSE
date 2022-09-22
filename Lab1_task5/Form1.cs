@@ -43,22 +43,6 @@ namespace Lab1_task5
             button2.Enabled = (e.CurrentState == ConnectionState.Open);
         }
 
-
-        //Правильная строка подключения
-        //string testConnect = @"Provider=SQLOLEDB.1;Integrated Security=SSPI;Persist Security Info=False;Initial Catalog=MyDB;Data Source=DESKTOP-V4EPFJ1";
-
-        //Неверное значение "Provider"
-        //string testConnect = @"Provider=SQLOLEqweDB.1;Integrated Security=SSPI;Persist Security Info=False;Initial Catalog=MyDB;Data Source=DESKTOP-V4EPFJ1";
-
-        //Недопустимое значение "Integrated Security"
-        //string testConnect = @"Provider=SQLOLEDB.1;Integrated Security=SSPI23311ы;Persist Security Info=False;Initial Catalog=MyDB;Data Source=DESKTOP-V4EPFJ1";
-
-        //Ошибка 17 (Неверное имя Cервера)
-        //string testConnect = @"Provider=SQLOLEDB.1;Integrated Security=SSPI;Persist Security Info=False;Initial Catalog=MyDB;Data Source=DESKTOP-V4EPFJsd1";
-
-        //Ошибка 4060 (Неверное имя Базы Данных)
-        //string testConnect = @"Provider=SQLOLEDB.1;Integrated Security=SSPI;Persist Security Info=False;Initial Catalog=MyD22B;Data Source=DESKTOP-V4EPFJ1";
-
         private void button1_Click(object sender, EventArgs e)
         {
             try
@@ -121,6 +105,23 @@ namespace Lab1_task5
                 }
             }
 
+
+        }
+
+        private void productAmountBtn_Click(object sender, EventArgs e)
+        {
+            if (connection.State != ConnectionState.Open)
+            {
+                MessageBox.Show("Соединение с базой данных уже установлено");
+                return;
+            }
+
+
+            OleDbCommand command = new OleDbCommand();
+            command.Connection = connection;
+            command.CommandText = "SELECT COUNT(*) FROM Products";
+            int number = (int)command.ExecuteScalar();
+            label1.Text = number.ToString();
 
         }
     }

@@ -22,16 +22,16 @@ namespace Lab1_task3
         OleDbConnection connection = new OleDbConnection();
 
         //Правильная строка подключения
-        string testConnect = @"Provider=SQLOLEDB.1;Integrated Security=SSPI;Persist Security Info=False;Initial Catalog=MyDB;Data Source=DESKTOP-V4EPFJ1";
+        string testConnect = @"Provider=SQLOLEDB.1;Integrated Security=SSPI;Persist Security Info=False;Initial Catalog=Northwind;Data Source=DESKTOP-V4EPFJ1";
 
         //Неверное значение "Provider"
-        //string testConnect = @"Provider=SQLOLEqweDB.1;Integrated Security=SSPI;Persist Security Info=False;Initial Catalog=MyDB;Data Source=DESKTOP-V4EPFJ1";
+        //string testConnect = @"Provider=SQLOLEqweDB.1;Integrated Security=SSPI;Persist Security Info=False;Initial Catalog=Northwind;Data Source=DESKTOP-V4EPFJ1";
 
         //Недопустимое значение "Integrated Security"
-        //string testConnect = @"Provider=SQLOLEDB.1;Integrated Security=SSPI23311ы;Persist Security Info=False;Initial Catalog=MyDB;Data Source=DESKTOP-V4EPFJ1";
+        //string testConnect = @"Provider=SQLOLEDB.1;Integrated Security=SSPI23311ы;Persist Security Info=False;Initial Catalog=Northwind;Data Source=DESKTOP-V4EPFJ1";
 
         //Ошибка 17 (Неверное имя Cервера)
-        //string testConnect = @"Provider=SQLOLEDB.1;Integrated Security=SSPI;Persist Security Info=False;Initial Catalog=MyDB;Data Source=DESKTOP-V4EPFJsd1";
+        //string testConnect = @"Provider=SQLOLEDB.1;Integrated Security=SSPI;Persist Security Info=False;Initial Catalog=Northwind;Data Source=DESKTOP-V4EPFJsd1";
 
         //Ошибка 4060 (Неверное имя Базы Данных)
         //string testConnect = @"Provider=SQLOLEDB.1;Integrated Security=SSPI;Persist Security Info=False;Initial Catalog=MyD22B;Data Source=DESKTOP-V4EPFJ1";

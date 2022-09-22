@@ -19,7 +19,7 @@ namespace Lab1_task1_task2
         }
         OleDbConnection connection = new OleDbConnection();
 
-        string testConnect = @"Provider=SQLOLEDB.1;Integrated Security=SSPI;Persist Security Info=False;Initial Catalog=MyDB;Data Source=DESKTOP-V4EPFJ1";
+        string testConnect = @"Provider=SQLOLEDB.1;Integrated Security=SSPI;Persist Security Info=False;Initial Catalog=Northwind;Data Source=DESKTOP-V4EPFJ1";
 
         private void button1_Click(object sender, EventArgs e)
         {
